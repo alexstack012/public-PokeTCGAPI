@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#navTotal{
+    width: 100%;;
+}
+
+#logo{
+    width: 75px;
+    height: 5%;
+    margin: 10px;
+}
+#logoText{
+    margin-left: 35px;
+}
+
+#navBott{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#mainContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 866px;
+}
+
+#mainTop{
+margin: 0px;
+}
+
+.mainText{
+    display: flex;
+    justify-content: center;
+}
+
+.mainCards{
+    display: flex;
+}
+
+#mainBott{
+    margin: 0px;
+}
+
+#leftBar{
+    margin: 20px;
+}
+
+#rightBar{
+    margin: 20px;
+}
+
+.grow { transition: .2s ease-in-out; }
+
+.grow:hover {     
+    transform: scale(1.2) perspective(1px) translateZ(0);
+    transition-duration: .3s;
+    transition-property: transform;
+}
+
+.round{
+    border-radius: 10px;
+}
+.shadow1{
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.959);
+}
+
+.shadow2{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.959);
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000; background-color: gray; box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.959); border: none }
+    49%{    color: #000; background-color: gray;box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.959);border: none}
+    60%{    color: transparent; background-color: transparent; box-shadow: none; border: none;}
+    100%{    color:transparent;  background-color: transparent; box-shadow: none;border: none;}
+}
+.btn1 {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .3rem 0.5rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

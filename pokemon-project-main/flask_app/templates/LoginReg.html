@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Log in</title>
+    <div id="title" style="    display: flex;
+    justify-content: flex-end;">
+        <img style="
+        height: 220px; margin: 20px; margin-right: 107px;"
+            src="https://fontmeme.com/permalink/210728/76172cc5ada1aa057dfd75a07ae7ea43.png" alt="pokemon-font"
+            border="0">
+    </div>
+</head>
+
+<body style="background-image: url(/static/965691_abeniani_pokemon-sword-and-shield-starters-animation.gif); background-repeat: no-repeat;
+background-attachment: fixed; background-position: right; background-size: contain; background-color: #2f2f2f;">
+    <br>
+    <div class=" container" style="display: table-caption;
+    justify-content: left;
+    margin: 24px;
+    margin-top: -191px;
+    color: whitesmoke;">
+        <div class="row">
+            {% with messages = get_flashed_messages() %}
+            <!-- declare a variable called messages -->
+            {% if messages %}
+            <!-- check if there are any messages -->
+            {% for message in messages %}
+            <!-- loop through the messages -->
+            <p class="text-danger">{{message}}</p> <!-- display each message in a paragraph tag -->
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <div class="col" style="margin-bottom: 107px;">
+                <h1 style="margin-left: -19px;">Registration</h1>
+                <form action="/register" method="POST" style="display: table-caption; background: transparent;">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input class="form-group" style="margin-bottom: 8px;" type="text" placeholder="First Name"
+                            name="first_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input class="form-group" style="margin-bottom: 8px;" type="text" placeholder="Last Name"
+                            name="last_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-group" style="margin-bottom: 8px;" type="text" placeholder="Email"
+                            name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-group" style="margin-bottom: 8px;" type="password" placeholder="Password"
+                            name="password">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input class="form-group" style="margin-bottom: 8px;" type="password"
+                            placeholder="Confirm Password" name="conf_pass">
+                    </div>
+                    <input style="margin: 4px;
+                    margin-left: 39px;margin-top: 10px;" type="submit" class="btn btn-light" value="Register">
+                </form>
+            </div>
+            <!--end of REGISTRATION and START of login-->
+            <div class="col">
+                <h1 style="margin-left: 34px;">Login</h1>
+                <form action="/login" method="POST" style="display: table-caption; background: transparent;">
+                    <div class=" form-group">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input class="form-group" style="margin-bottom: 8px;" placeholder="Email" type="text"
+                                name="email">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input class="form-group" style="margin-bottom: 8px;" type="password" placeholder="Password"
+                                name="password">
+                        </div>
+                        <input style="    margin: 4px;
+                        margin-left: 39px;margin-top: 10px;" type="submit" class="btn btn-light" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
